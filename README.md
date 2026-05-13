@@ -71,3 +71,4 @@ export default defineConfig([
   },
 ])
 ```
+![alt text](image.png)

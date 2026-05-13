@@ -7,9 +7,13 @@ type ChartItem = {
 };
 
 const data: ChartItem[] = [
-  { day: "High", value: 20 },
-  { day: "Medium", value: 75 },
-  { day: "Low", value: 68 },
+  { day: "Sat", value: 20 },
+  { day: "Sun", value: 75 },
+  { day: "Mon", value: 68 },
+  { day: "Thu", value: 50 },
+  { day: "Wed", value: 32 },
+  { day: "Tue", value: 63 },
+  { day: "Fri", value: 15 },
 ];
 
 const WeeklyChart = () => {
