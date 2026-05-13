@@ -45,6 +45,14 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer;
+
+  perspective: 800px;
+
+  transition: transform 0.3s ease;
+}
+
+.bar-wrapper:hover {
+  transform: translateY(-4px);
 }
 
 .bar-bg {
@@ -59,14 +67,49 @@
 
 .bar-fill {
   width: 100%;
-  background: #3b82f6;
   border-radius: 30px;
-  transition: all 0.3s ease;
+
+  transform-style: preserve-3d;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    filter 0.35s ease,
+    opacity 0.35s ease;
+
+  box-shadow:
+    inset -2px -2px 6px rgba(255, 255, 255, 0.25),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.15),
+    0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.bar-wrapper:hover .bar-fill {
+  transform:
+    rotateX(-12deg)
+    rotateY(8deg)
+    translateY(-6px)
+    translateZ(20px)
+    scale(1.05);
+
+  filter: brightness(1.08);
+
+  box-shadow:
+    inset -2px -2px 8px rgba(255, 255, 255, 0.3),
+    inset 2px 2px 8px rgba(0, 0, 0, 0.2),
+    0 18px 30px rgba(0, 0, 0, 0.28);
 }
 
 .bar-wrapper:hover .bar-fill {
   opacity: 0.85;
   transform: scaleY(1.03);
+}
+
+.card {
+  transform-style: preserve-3d;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 30px 60px rgba(0, 0, 0, 0.12);
 }
 
 .label {
